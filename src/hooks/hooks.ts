@@ -1,14 +1,15 @@
 import { BeforeAll, AfterAll, Before, After, AfterStep, BeforeStep, Status } from "@cucumber/cucumber";
 import { chromium, Browser, BrowserContext } from "@playwright/test";
 import { driver } from "./driver";
+import { browserManager } from "../helper/browsers/browserManager";
 
 // init variables
-let browser: Browser;
 let context: BrowserContext;
+let browser: Browser;
 
 BeforeAll(async function () {
     // run chrome browser
-    browser = await chromium.launch({headless: false});
+    browser = await browserManager();
 })
 
 Before(async function(){
