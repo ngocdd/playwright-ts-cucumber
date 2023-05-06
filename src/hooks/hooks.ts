@@ -2,6 +2,7 @@ import { BeforeAll, AfterAll, Before, After, AfterStep, BeforeStep } from "@cucu
 import { Browser, BrowserContext } from "@playwright/test";
 import { driver } from "./driver";
 import { browserManager } from "../helper/browsers/browserManager";
+import { getEnv } from "../helper/env/env";
 
 // init variables
 let context: BrowserContext;
@@ -9,6 +10,7 @@ let browser: Browser;
 
 BeforeAll(async function () {
     // run browser from browser manager
+    getEnv();
     browser = await browserManager();
 })
 

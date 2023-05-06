@@ -6,7 +6,7 @@ import { driver } from "../../hooks/driver";
 
 Given('go to google.com', async function () {
 
-    await driver.page.goto("https://www.google.com/");
+    await driver.page.goto(process.env.BASEURL);
 });
 
 

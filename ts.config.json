@@ -1,8 +1,0 @@
-{
-    "compilerOptions": {
-        "typeRoots": [
-            "./node_mpdules/@types",
-            "src/helper/browsers/types"
-        ]
-    }
-}
