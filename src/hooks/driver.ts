@@ -1,6 +1,7 @@
 import { Page } from "@playwright/test";
 
-export const pageFixture = {
+// create common driver to reuse on all tests
+export const driver = {
     // @ts-ignore
     page: undefined as Page
 }
