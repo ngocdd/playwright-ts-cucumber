@@ -29,7 +29,7 @@ BeforeStep(async function({pickle}){
 AfterStep(async function({pickle, result}){
     const time: number = Date.now();
     await pageFixture.page.waitForLoadState('networkidle');
-    const img = await pageFixture.page.screenshot({path: "./screenshots/" +time+".png", type: "png", fullPage: true, timeout: 1000});
+    const img = await pageFixture.page.screenshot({path: "./test-results/screenshots/" +time+".png", type: "png", fullPage: true, timeout: 1000});
     await this.attach(img, "image/png");
 })
 
