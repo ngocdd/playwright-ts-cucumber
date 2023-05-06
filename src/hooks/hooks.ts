@@ -1,5 +1,5 @@
-import { BeforeAll, AfterAll, Before, After, AfterStep, BeforeStep, Status } from "@cucumber/cucumber";
-import { chromium, Browser, BrowserContext } from "@playwright/test";
+import { BeforeAll, AfterAll, Before, After, AfterStep, BeforeStep } from "@cucumber/cucumber";
+import { Browser, BrowserContext } from "@playwright/test";
 import { driver } from "./driver";
 import { browserManager } from "../helper/browsers/browserManager";
 

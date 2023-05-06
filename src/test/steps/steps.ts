@@ -1,11 +1,8 @@
 // import { Browser, Page } from "@playwright/test";
 
 import { Given, When, Then } from "@cucumber/cucumber";
-import { Page, chromium, Browser } from "@playwright/test";
+import { Page, Browser } from "@playwright/test";
 import { driver } from "../../hooks/driver";
-let page: Page;
-let browser: Browser;
-
 
 Given('go to google.com', async function () {
 
