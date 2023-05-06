@@ -8,7 +8,7 @@ let context: BrowserContext;
 let browser: Browser;
 
 BeforeAll(async function () {
-    // run chrome browser
+    // run browser from browser manager
     browser = await browserManager();
 })
 
@@ -36,12 +36,13 @@ AfterStep(async function({pickle, result}){
 
 After(async function({result}){
 
-    // close driver after each scenario
+    // close page
     await  driver.page.close();
+    // close browser context
     await  context.close();
 })
 
 AfterAll(async function() {
-    // close browser after test
+    // close browser
     await browser.close();
 })
