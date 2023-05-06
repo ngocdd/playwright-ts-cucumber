@@ -35,7 +35,6 @@ AfterStep(async function({pickle, result}){
 
 
 
-
 After(async function({result}){
     console.log(result?.status);
     await  pageFixture.page.close();
