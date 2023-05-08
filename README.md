@@ -1,56 +1,31 @@
 # Playwright-ts-cucumber
-
-This is a sample project for running Cucumber tests with Playwright using TypeScript.
-
+This is a test automation framework built with Playwright, Cucumber, and TypeScript.
 
 ## Prerequisites
-
-
-Node.js installed on your system.
-
-A text editor or integrated development environment (IDE) preferred with TypeScript support.
-
-
+Node.js (v14 or higher)
 ## Installation
+Clone the repository: ```git clone https://github.com/<your-username>/playwright-ts-cucumber.git ```
+Navigate to the cloned repository: ``` cd playwright-ts-cucumber ```
+Install dependencies: ``` npm install ```
+## Usage
+To run tests, use the following command:
+```
+npm test 
+```
+This will run Cucumber tests with the environment set to UAT.
 
 
-Clone the repository.
+After the tests have completed, a HTML report will be generated and can be found in the reports folder.
 
-Install the dependencies with npm install.
-
-
-## Running the Tests
-
-Tests can be run using the command ```npm test```. By default, the command runs tests in uat environment.
-
-
+## Scripts
+test: Runs Cucumber tests with the environment set to UAT.
+posttest: Generates a HTML report of the test results.
 ## Dependencies
-
-The following dependencies are used in this project:
-
-
-@cucumber/cucumber - BDD testing framework.
-
-@playwright/test - Library for running Playwright tests.
-
-cross-env - Tool for setting environment variables on different platforms.
-
-dotenv - Utility for reading environment variables from a .env file.
-
-ts-node - Library for running TypeScript files directly.
-
-
+@cucumber/cucumber: Cucumber framework.
+@playwright/test: Playwright test runner.
+cross-env: Sets environment variables.
+dotenv: Loads environment variables from a .env file.
+multiple-cucumber-html-reporter: Generates a HTML report of the test results.
+ts-node: Allows TypeScript to be run in a Node.js environment.
 ## License
-
-This project is licensed under the ISC License - see the LICENSE.md file for details.
-
-
-## Acknowledgments
-
-
-Playwright
-
-Cucumber.js
-
-TypeScript
-
+This project is licensed under the ISC License. See the LICENSE file for details.
