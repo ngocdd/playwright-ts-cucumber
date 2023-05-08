@@ -44,10 +44,15 @@ test: Runs Cucumber tests with the environment set to UAT.
 posttest: Generates a HTML report of the test results.
 ## Dependencies
 @cucumber/cucumber: Cucumber framework.
+
 @playwright/test: Playwright test runner.
+
 cross-env: Sets environment variables.
+
 dotenv: Loads environment variables from a .env file.
+
 multiple-cucumber-html-reporter: Generates a HTML report of the test results.
+
 ts-node: Allows TypeScript to be run in a Node.js environment.
 ## License
 This project is licensed under the ISC License. See the LICENSE file for details.

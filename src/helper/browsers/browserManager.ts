@@ -1,6 +1,6 @@
 import { LaunchOptions, chromium, firefox, webkit } from "@playwright/test"
 
-// lauch options
+// launch options
 const options: LaunchOptions = {
     headless: false
 }
