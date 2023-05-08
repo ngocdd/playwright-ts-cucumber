@@ -25,7 +25,9 @@ Overall, the "playwright-ts-cucumber" project provides a good example of how to 
 Node.js (v14 or higher)
 ## Installation
 Clone the repository: ```git clone https://github.com/<your-username>/playwright-ts-cucumber.git ```
+
 Navigate to the cloned repository: ``` cd playwright-ts-cucumber ```
+
 Install dependencies: ``` npm install ```
 ## Usage
 To run tests, use the following command:
