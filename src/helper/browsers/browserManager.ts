@@ -24,3 +24,4 @@ export const browserManager = ()=>{
             throw new Error("please set browser to run test!");
     }
 }
+

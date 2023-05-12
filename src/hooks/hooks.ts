@@ -3,6 +3,8 @@ import { Browser, BrowserContext } from "@playwright/test";
 import { Driver } from "./driver";
 import { browserManager } from "../helper/browsers/browserManager";
 import { getEnv } from "../helper/env/env";
+import { createLogger } from "winston";
+import { options } from "../logs/logger";
 
 // init variables
 let context: BrowserContext;
@@ -13,15 +15,17 @@ BeforeAll(async function () {
     getEnv();
     setDefaultTimeout(30000);
     browser = await browserManager();
+})
+
+Before(async function({pickle}){
+    const scenarioName = pickle.name + pickle.id;
+
     // create new browser and context
     context = await browser.newContext();
     const page = await context.newPage();  
     // add new context into driver to reuse
     Driver.page = page;
-})
-
-Before(async function(){
-  
+    Driver.logger = createLogger(options(scenarioName));
 });
 
 BeforeStep(async function({pickle}){
@@ -43,10 +47,12 @@ After(async function({result}){
 })
 
 AfterAll(async function() {
-    // close page
+    // // close page
     // await Driver.page.close();
-    // close browser context
+    // // close browser context
     // await context.close();
-    // close browser
+    // // close browser
     // await browser.close();
+    // close logger
+    Driver.logger.close();
 })
