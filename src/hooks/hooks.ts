@@ -4,7 +4,7 @@ import { Driver } from "./driver";
 import { browserManager } from "../helper/browsers/browserManager";
 import { getEnv } from "../helper/env/env";
 import { createLogger } from "winston";
-import { options } from "../logs/logger";
+import { options } from "../logger/logger";
 
 // init variables
 let context: BrowserContext;
@@ -36,9 +36,9 @@ AfterStep(async function({pickle, result}){
     const time: number = Date.now();
     // wait page finished render before take a screenshot
     await Driver.page.waitForLoadState('networkidle');
-    // take screenshot and save into ./test-results/screenshots folder with name is current minisecond time
+    // take screenshot and save into ./test-results/screenshots folder with name is current mini second time
     const img = await Driver.page.screenshot({path: "./test-results/screenshots/" +time+".png", type: "png", fullPage: true, timeout: 1000});
-    // aadd screenshot into report
+    // add screenshot into report
     this.attach(img, "image/png");
 })
 
@@ -54,5 +54,5 @@ AfterAll(async function() {
     // // close browser
     // await browser.close();
     // close logger
-    Driver.logger.close();
+    // Driver.logger.close();
 })

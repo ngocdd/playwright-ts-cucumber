@@ -28,7 +28,13 @@ Clone the repository: ```git clone https://github.com/<your-username>/playwright
 
 Navigate to the cloned repository: ``` cd playwright-ts-cucumber ```
 
-Install dependencies: ``` npm install ```
+Install dependencies: 
+``` npm i ```
+
+``` npm install npm i -D @playwright/test``` 
+# install supported browsers
+``` npx playwright install``` 
+
 ## Usage
 To run tests, use the following command:
 ```
