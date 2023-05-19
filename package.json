@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env ENV=uat cucumber-js --debug test",
+    "test": "cross-env ENV=uat cucumber-js test",
     "posttest": "npx ts-node src/helper/reports/report.ts",
     "cucumber": "cucumber-js"
   },
