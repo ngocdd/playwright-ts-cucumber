@@ -34,8 +34,4 @@ export default class loginPage{
         
     }
 
-    async pausePage(){
-        await this.page.pause();
-    }
-
 }

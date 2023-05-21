@@ -3,11 +3,12 @@ import homePage from '../pageObject/homePage';
 import { Driver } from '../../hooks/driver';
 
 let page: homePage;
-page = new homePage(Driver);
+
 
 
 
 Given('user go to textbox page', async function () {
+    page = new homePage(Driver);
     page.goToElementsPage();
     page.pausePage();
 });
