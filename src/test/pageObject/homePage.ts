@@ -22,9 +22,7 @@ export default class homePage{
         await this.page.locator(this.elements.elements).click();
         // await this.page.pause();
     }
-    async pausePage(){
-        await this.page.pause();
-    }
+
 
 
 }

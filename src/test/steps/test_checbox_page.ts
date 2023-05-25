@@ -10,7 +10,6 @@ let page: homePage;
 Given('user go to textbox page', async function () {
     page = new homePage(Driver);
     page.goToElementsPage();
-    page.pausePage();
 });
 
 
